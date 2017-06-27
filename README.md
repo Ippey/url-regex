@@ -27,7 +27,7 @@ $result = Ippey\UrlRegex::match('This contains URL. http://www.google.com');
 // array()
 $result = Ippey\UrlRegex::match('This contains no URL.');
 
-// array('https://www.google.co.jp/?q=github', 'http://www.github.com')
+// array('https://www.google.co.jp/?q=github', 'https://www.github.com')
 $result = Ippey\UrlRegex::match('This contains URL. https://www.google.co.jp/?q=github and https://www.github.com');
 
 ```
