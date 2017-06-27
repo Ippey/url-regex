@@ -32,6 +32,13 @@ class UrlRegexTest extends \Codeception\Test\Unit
         '<a href="http://www.yahoo.co.jp?hoge=123&foo=456">it is link.</a>' => [
             'http://www.yahoo.co.jp?hoge=123&foo=456'
         ],
+        'This contains URL. http://www.google.com' => [
+            'http://www.google.com'
+        ],
+        'This contains URL. https://www.google.co.jp/?q=github and https://www.github.com' => [
+            'https://www.google.co.jp/?q=github',
+            'https://www.github.com'
+        ],
     ];
 
     /** @var array */
@@ -40,6 +47,7 @@ class UrlRegexTest extends \Codeception\Test\Unit
         'https:///www.yahoo.co.jp/',
         'ftp:www.google.co.jp',
         'it is not url http://',
+        'This contains no URL.'
     ];
 
     protected function _before()
