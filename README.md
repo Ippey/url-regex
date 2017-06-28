@@ -5,7 +5,7 @@ Based on this [gist](https://gist.github.com/dperini/729294) by Diego Perini.
 
 ## Install
 ```
-composer install Ippey/UrlRegex
+composer require ippey/url-regex
 ```
 
 ## Usage
